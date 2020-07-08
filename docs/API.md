@@ -212,7 +212,8 @@ url, allowedDomains, deniedDomains, timeout, priority, depthPriority, delay, ret
     * `args` <[Array]<[Serializable]>> List of arguments to pass to the predicate function.
   * `retryCount` <[number]> Number of limit when retry fails, defaults to `3`.
   * `retryDelay` <[number]> Number of milliseconds after each retry fails, defaults to `10000`.
-  * `onPageRequest(request, page, options)` <[Function]> Optional callback to Puppeteer page.on('request').
+  * `setRequestInterception` <[boolean]> Enables requestinterception using Puppeteer API page.setRequestInterception. default to `false`.
+  * `onPageRequest(request, page, options)` <[Function]> Optional callback to Puppeteer page.on('request'). Must be set along setRequestInterception to `true`.
   * `jQuery` <[boolean]> Whether to automatically add [jQuery](https://jquery.com) tag to page, defaults to `true`.
   * `browserCache` <[boolean]> Whether to enable browser cache for each request, defaults to `true`.
   * `device` <[string]> Device to emulate. Available devices are listed [here](https://github.com/GoogleChrome/puppeteer/blob/master/DeviceDescriptors.js).
